@@ -349,6 +349,7 @@
                     resp ctx)))))
     (doseq [http-builder-fn http-builder-fns]
       (http-builder-fn builder req))
+    (println "Building an HTTP Client")
     (.build builder)))
 
 (defn build-async-http-client
